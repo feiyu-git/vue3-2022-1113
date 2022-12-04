@@ -1,0 +1,31 @@
+.float-image {
+  position: fixed;
+  right: 20px;
+  width: 130px;
+  height: 170px;
+  z-index: 100; // 页面弹窗、气泡为最高级（最高级为999）；普通区块为10-90内10的倍数；同层的多个元素，在该层级内使用相同的 z-index 或递增。
+  &__content-img {
+    width: 130px;
+    height: 130px;
+    margin-top: 40px;
+  }
+
+  &__close-icon {
+    width: 40px;
+    height: 38px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &__img {
+      float: right;
+      vertical-align: top;
+      width: 28px;
+      height: 28px;
+    }
+  }
+}
+
+.admin { // 在平台管理端不做绝对布局
+  position: static;
+}

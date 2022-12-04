@@ -1,0 +1,105 @@
+{
+  "name": "channel",
+  "version": "1.0.1-1",
+  "description": "app首页",
+  "basicLibrary": 1,
+  "repo": "",
+  "files": [
+    "src",
+    "config"
+  ],
+  "templateInfo": {
+    "typescript": false,
+    "mobx": true
+  },
+  "scripts": {
+    "prebuild:h5": "node config/entry.js",
+    "build:h5": "madp config && madp build --type h5",
+    "build:weapp": "madp config && madp build --type weapp",
+    "build:alipay": "madp config && madp build --type alipay",
+    "build:swan": "madp config && taro build --type swan",
+    "build:tt": "madp config && taro build --type tt",
+    "build:rn": "madp build --type rn",
+    "build:quickapp": "madp build --type quickapp",
+    "build:qq": "madp build --type qq",
+    "build:h5-report": "madp build --type h5 report",
+    "dev:weapp": "npm run build:weapp -- --watch",
+    "dev:swan": "npm run build:swan -- --watch",
+    "dev:alipay": "npm run build:alipay -- --watch",
+    "dev:tt": "npm run build:tt -- --watch",
+    "dev:h5": "npm run build:h5 -- --watch debug",
+    "dev:h5-st1": "cross-env ENV=st1 npm run dev:h5",
+    "dev:h5-se1": "cross-env ENV=se1 npm run dev:h5",
+    "dev:rn": "npm run build:rn -- --watch",
+    "dev:quickapp": "npm run build:quickapp -- --watch",
+    "dev:qq": "npm run build:qq -- --watch",
+    "lint": "eslint --ext .js,.jsx src --fix",
+    "prd:server": "madp server",
+    "build:h5-offline": "cross-env BT=offline npm run build:h5",
+    "dev:h5-offline": "cross-env BT=offline npm run dev:h5",
+    "dev:h5-sk": "cross-env ENV=st1 BT=sk CHANNEL=0APP npm run dev:h5",
+    "index1": "cross-env ENTRY=index npm run dev:h5",
+    "switch": "cross-env PACKAGE=npm node config/packagejson-switch.js"
+  },
+  "author": "mucfc",
+  "license": "MIT",
+  "lint-staged": {
+    "src/**/*.{js, jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {
+    "@mu/basic-library": "1.7.3-beta.3",
+    "@mu/bio-auth-zfb": "2.1.0-beta.10",
+    "@mu/biometrics": "1.4.0-beta.1",
+    "@mu/credit-card": "1.7.8",
+    "@mu/channel-repay-services": "1.2.1-alpha.17",
+    "@mu/coupon-selector": "3.4.3",
+    "@mu/loan-help": "1.0.1-beta.13",
+    "@mu/short-loan-card": "1.1.1",
+    "@mu/lui": "2.6.3-channel.0",
+    "@mu/madp-utils": "1.6.8",
+    "@mu/safe-sms-code": "1.3.5-beta.35",
+    "@mu/survey": "1.63.0",
+    "@mu/tarosdk-mu-bio-auth": "1.5.0-beta.2",
+    "@mu/unhandle-notice": "1.0.6-beta.21",
+    "@mu/user-bhvr-detector": "1.1.1",
+    "lodash": "4.17.21",
+    "lodash-es": "4.17.21"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "8.3.5",
+    "@commitlint/config-conventional": "8.3.4",
+    "@mu/madp-cli": "1.5.19",
+    "@types/react": "16.9.26",
+    "@types/webpack-env": "1.15.1",
+    "babel-eslint": "10.1.0",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "babel-plugin-transform-decorators-legacy": "1.3.5",
+    "babel-plugin-transform-jsx-stylesheet": "0.6.9",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-env": "1.7.0",
+    "cross-env": "5.2.1",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "17.1.1",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.19.0",
+    "eslint-plugin-react-hooks": "1.7.0",
+    "husky": "3.1.0",
+    "image-webpack-loader": "6.0.0",
+    "lint-staged": "9.5.0",
+    "preload-webpack-plugin": "3.0.0-beta.4",
+    "script-ext-html-webpack-plugin": "2.1.5",
+    "standard-version": "6.0.1",
+    "vconsole-webpack-plugin": "1.5.2",
+    "webpack-bundle-analyzer": "3.6.1"
+  }
+}

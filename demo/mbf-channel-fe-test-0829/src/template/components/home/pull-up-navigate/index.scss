@@ -1,0 +1,25 @@
+.pull-up-navigate{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 50px;
+  .icon{
+    width: 88px;
+    height: 88px;
+    margin-bottom: 40px;
+  }
+  .pull-up-text-wrapper{
+    vertical-align: middle;
+    .pull-up-image {
+      width: 46px;
+      height: 46px;
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+    .pull-up-text {
+      font-size: 26px;
+      vertical-align: middle;
+      display: inline-block;
+    }
+  }
+}

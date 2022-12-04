@@ -1,0 +1,53 @@
+.homepage-block-container.black {
+  $FDZBgColor: #F8D3AB; // 奋斗者金色背景
+  $FDZFontColor: #000; // 奋斗者黑色字体
+  // 奋斗者主题样式
+  @mixin fdz-bg-gradient {
+    background: -webkit-linear-gradient(to right, #FFE4C5, #F8D3AB);
+    /*  Safari 5.1 到 6.0 */
+    background: -o-linear-gradient(to right, #FFE4C5, #F8D3AB);
+    /*  Opera 11.6 到 12.0 */
+    background: -moz-linear-gradient(to right, #FFE4C5, #F8D3AB);
+    /*  Fx 3.6 到 15 */
+    background: linear-gradient(to right, #FFE4C5, #F8D3AB);
+  }
+
+  @mixin fdz-btn-base {
+    color: $FDZFontColor;
+    background: $FDZBgColor; /* 针对不支持渐变的浏览器,使用默认的背景颜色 */
+    @include fdz-bg-gradient;
+  }
+
+  .backgroundImage {
+    background-image: url("../img/bg_fdz.png");
+  }
+
+  .lui__large-loan .lui__large-loan__main .large-loan__main--right, .homepage-loading__right, .credit-card .content-right__credit-crad-btn, .credit-card .card-net-error-app .content-right {
+    @include fdz-btn-base;
+  }
+
+  .card-with-btn-app__main .content-right__credit-crad-btn {
+      @include fdz-btn-base;
+  }
+
+  .short-loan-card {
+    .short-loan-card-band-no_fdz {
+      border: 2px solid $FDZFontColor;
+      color: $FDZFontColor;
+
+      &-selected {
+        border: none;
+        color: $FDZFontColor;
+        // 颜色渐变
+        background: #FFE4C5; /* 针对不支持渐变的浏览器,使用默认的一口借背景颜色 */
+        @include fdz-bg-gradient;
+      }
+    }
+  }
+
+
+  .lui__financial__services__list .single-item__btn, .third-container__main .main-right__btn {
+    @include fdz-btn-base;
+  }
+}
+

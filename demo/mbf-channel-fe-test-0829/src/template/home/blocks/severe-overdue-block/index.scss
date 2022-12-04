@@ -1,0 +1,36 @@
+.homepage-block-container.severe-overdue {
+  $REDMain: #CC1F15;
+  // 红色主题样式
+
+  .backgroundImage {
+    background-image: url("../../../static/home/bg_severe-overdue.png");
+  }
+
+  .credit-card .content-right__credit-crad-btn, .credit-card .card-net-error-app .content-right {
+    background: $REDMain;
+  }
+
+  .card-with-btn-app__main {
+
+    .content-right .content-right__credit-crad-btn {
+      background: $REDMain;
+    }
+  }
+
+  &.is_login {
+    .card-with-btn-app__main {
+      .content-left-bottom__desc {
+        font-size: 24px;
+        color: #CC1F15;
+
+        span {
+          color: currentColor;
+        }
+      }
+    }
+  }
+
+  .lui_btn_theme {
+    background: $REDMain !important;
+  }
+}

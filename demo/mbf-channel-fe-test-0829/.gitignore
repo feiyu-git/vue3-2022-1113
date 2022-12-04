@@ -1,0 +1,24 @@
+dist/
+.temp/
+__download_temp__/
+__download__/
+.rn_temp/
+node_modules/
+.DS_Store
+.history/
+.idea
+
+src/app.scss
+src/app.jsx
+src/index.html
+
+# yarn.lock
+yarn-error.log
+# package-lock.json
+
+# shell project
+.submodulefiles
+packages
+
+# jetbrain
+.idea

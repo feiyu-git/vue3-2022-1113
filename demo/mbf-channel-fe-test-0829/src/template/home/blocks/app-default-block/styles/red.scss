@@ -1,0 +1,54 @@
+.homepage-block-container.red {
+  $color-brand: #f2473d;
+  $color-brand-light: #F16E61;
+  $REDMain: #f2473d;
+  // 红色主题样式
+
+
+  // lui展位按钮主题色统一处理
+  .lui_btn_theme {
+    background: $REDMain !important;
+  }
+  .backgroundImage {
+    background-image: url("../img/bg_normal_2APP.png");
+  }
+  // 尊享服务特殊样式处理
+  .lui__new__financial__services{
+    .more-item__content__button {
+      color: $REDMain;
+    }
+    .secend-item__content__button {
+      border: 2px solid $REDMain;
+      color: $REDMain;
+    }
+  }
+
+  // .homepage-loading__right, .credit-card .content-right__credit-crad-btn, .credit-card .card-net-error-app .content-right {
+  //   background: $REDMain;
+  // }
+
+  // .card-with-btn-app__main .content-right__credit-crad-btn {
+  //   background: $REDMain;
+  // }
+
+  .short-loan-card {
+    .short-loan-card-band-no_fdz {
+      border: 2px solid $REDMain;
+      color: $REDMain;
+
+      &-selected {
+        border: $REDMain;
+        // 颜色渐变
+        background: $REDMain;
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  // .at-button, .lui__bottom-login__btn, .third-container__main .main-right__btn,
+  // .lui__list__adv__all .lui__all__list .lui__single__item .blue, .lui__financial__services__list .single-item__btn {
+  //   background: $REDMain;
+  //   border-color: $REDMain;
+  // }
+}
+

@@ -1,0 +1,60 @@
+.login-simplify {
+  .registerProtocolArea {
+    padding-left: 10px;
+    padding-bottom: 10px;
+
+    .mu-radio__title {
+      span {
+        font-size: 24px;
+      }
+    }
+
+    .mu-icon,
+    .mu-icon-unchecked {
+      font-size: 32px;
+    }
+  }
+
+  .contract_3CUAPP {
+    .protocal-link {
+      color: #E70027;
+    }
+    .mu-icon-checked {
+      color: #E70027;
+    }
+  }
+
+  .agreement_3CUAPP {
+    .bottom-footer {
+      .at-button {
+        background: #E70027;
+      }
+    }
+  }
+
+  .loginAreaView {
+    .loginAreaView-registerProtocolArea {
+      margin-left: 38px;
+      padding: 0;
+    }
+
+    .loginAreaView-inputView {
+      .loginAreaView-inputView-innerInput {
+        background-color: #f3f3f3;
+      }
+    }
+
+
+  }
+
+
+  .disabled {
+    opacity: 0.5;
+  }
+
+  .at-drawer {
+    &__content {
+      padding: 0 !important;
+    }
+  }
+}

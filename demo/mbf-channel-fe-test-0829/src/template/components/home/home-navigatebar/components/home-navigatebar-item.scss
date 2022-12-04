@@ -1,0 +1,36 @@
+.home-navigatebar-item {
+  width: 56px;
+  height: 56px;
+  margin-right: 40px;
+  position: relative;
+  &__img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+  }
+  &__reddot {
+    opacity: 0.9;
+    background: #FE5A5F;
+    border: 2px solid #FFFFFF;
+    font-size: 18px;
+    line-height: 24px;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    padding: 0 8px 0 8px;
+    top: -6px;
+    right: -5px;
+    height: 24px;
+    border-radius: 12px;
+    transform: translateX(30%);
+  }
+  
+  .circle {
+    top: -2px;
+    right: -5px;
+    padding: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+}

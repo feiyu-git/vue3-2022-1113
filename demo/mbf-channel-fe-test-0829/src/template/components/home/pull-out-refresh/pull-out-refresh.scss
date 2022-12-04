@@ -1,0 +1,165 @@
+// 这部分是zui原有部分
+
+@mixin pull-out-refresh-justify-content($value: flex-start) {
+  justify-content: $value;
+  @if $value == flex-start {
+    -webkit-box-pack: start;
+  } @else if $value == flex-end {
+    -webkit-box-pack: end;
+  } @else if $value == space-between {
+    -webkit-box-pack: justify;
+  } @else {
+    -webkit-box-pack: $value;
+  }
+}
+
+.pull-out-refresh-content {
+  transform-origin: left top 0;
+}
+
+.pull-out-refresh-content-wrapper {
+  overflow: hidden;
+}
+
+.pull-out-refresh-transition {
+  transition: transform 0.3s;
+}
+
+@keyframes pull-out-refresh-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.pull-out-refresh-loading {
+  @include pull-out-refresh-justify-content(center);
+
+  display: flex;
+  height: 132px;
+  align-items: center;
+
+  .indicator {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    position: relative;
+    box-sizing: border-box;
+    border: 3px solid rgba(166, 166, 166, 0.5);
+    border-right: 3px solid #3477FF;
+    animation: pull-out-refresh-loading 2s linear infinite;
+  }
+
+  & > span,p,div {
+    margin-left: 12px;
+    font-size: 26px;
+    color: #A6A6A6;
+  }
+}
+
+//这部分是新开发部分
+.pull-out-block {
+  width: 100%;
+  position: relative;
+  // z-index: -1;
+
+  .pull-out-full-screen-block {
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    //bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pull-out-full-screen-block-to-full-screen {
+    position: relative;
+    height: 100vh;
+    transition: height 0s !important;
+  }
+
+  .pull-out-full-screen-img-box {
+    width: 100%;
+    height: 100vh;
+
+    .pull-out-full-screen-img {
+      width: 100%;
+      height: 100%;
+      >img {
+        // 图片尽可能全屏而不变形
+        object-fit: cover;
+      }
+    }
+  }
+
+  .pull-out-block-bottom {
+    bottom: 0px;
+
+  }
+
+  .pull-out-block-top {
+    top: 0px;
+  }
+
+  .pull-out-refresh-block {
+    width: 100%;
+    //bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pull-out-refresh-block-absolute {
+    position: absolute;
+  }
+
+  .pull-out-refresh-block-relative {
+    position: relative;
+  }
+}
+
+@keyframes auto-pull-down-animation {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  33% {
+    transform: translate3d(0, 200px, 0);
+  }
+  67% {
+    transform: translate3d(0, 200px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes auto-pull-up-animation {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  33% {
+    transform: translate3d(0, -200px, 0);
+  }
+  67% {
+    transform: translate3d(0, -200px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.auto-pull-down-animation-node{
+  animation: auto-pull-down-animation 3s ease-out 1;
+}
+
+.auto-pull-up-animation-node{
+  animation: auto-pull-up-animation 3s ease-out 1;
+}
+
+
+

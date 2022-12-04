@@ -1,0 +1,161 @@
+.save-money-card {
+  margin: 40px 20px 0;
+  box-sizing: border-box;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 32px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    .mu-text__default {
+      &.save-money-card__top--title {
+        padding-left: 10px;
+      }
+
+      &.save-money-card__top--more {
+        font-size: 26px;
+        color: #808080;
+        font-weight: normal;
+
+        .mu-icon-jump-cicle {
+          font-size: 30px;
+          margin-left: 10px;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+
+  &__main {
+    width: 100%;
+    background: #fff;
+    border-radius: 16px;
+  }
+
+  &__list {
+    position: relative;
+    width: 100%;
+    height: 174px;
+    font-size: 22px;
+    color: #fff;
+    box-sizing: border-box;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    // display: flex;
+    align-items: center;
+    z-index: 99;
+  }
+
+  &__list--bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+  }
+
+  &__list--content {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    // 兼容微信小程序
+    mu-view {
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      .save-money-card__list--item {
+        width: 100%;
+      }
+    }
+
+    mu-text {
+      max-width: 100%;
+      text-align: center;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+
+  &__list--item {
+    width: 25%;
+    flex: 1;
+    flex-shrink: 0;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .taro-img,
+    .save-money-card__list--img {
+      width: 60px;
+      height: 60px;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .mu-text__default {
+      width: 100%;
+      text-align: center;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+
+  &__detail {
+    box-sizing: border-box;
+    line-height: 1;
+    padding: 0 30px 30px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28px;
+    color: #000;
+    font-weight: bold;
+
+    .mu-text__default {
+      font-family: number-font, DINAlternate-Bold, PingFangSC-Semibold;
+      font-size: 56px;
+      margin: 0 5px;
+    }
+
+    .save-money-card__detail--desc {
+      font-size: 24px;
+      color: #808080;
+      font-weight: normal;
+      margin-top: 20px;
+
+      .mu-text__default {
+        margin: 0;
+        font-size: 24px;
+        color: #FE5A5F;
+        margin-right: 6px;
+      }
+    }
+
+    .save-money-card--btn {
+      width: 174px;
+      height: 72px;
+      line-height: 72px;
+      text-align: center;
+      border-radius: 60px;
+      background-image: linear-gradient(to right, #FFE4C5, #F8D3AB);
+    }
+  }
+}

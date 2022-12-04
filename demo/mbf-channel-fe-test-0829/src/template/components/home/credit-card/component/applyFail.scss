@@ -1,0 +1,69 @@
+.apply-fail {
+  .content {
+    margin: 20px 20px 0 20px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 20px 0;
+    .item {
+      height: 130px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      &__icon {
+        margin-left: 30px;
+        margin-right: 40px;
+        height: 80px;
+        width: 80px;
+      }
+      &__middle {
+        flex: 1;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        &__title {
+          font-size: 28px;
+          color: #000000;
+        }
+        &__subTitle {
+          margin-top: 18px;
+          font-size: 24px;
+          color: #808080;
+        }
+      }
+      &__btn {
+        margin-right: 30px;
+        height: 60px;
+        width: 148px;
+        background-color: #347fff;
+        border-radius: 30px;
+        color: #ffffff;
+        font-size: 26px;
+        color: #FFFFFF;
+        text-align: center;
+        line-height: 60px;
+      }
+
+      .item__btn.channel-2APP {
+        background-color: #F2473D;
+      }
+
+      .blue {
+        background-color: #347fff;
+        color: #ffffff;
+      }
+
+      .black {
+        background-image: linear-gradient(to right, #FFE4C5, #F8D3AB);
+        font-weight: bold;
+        color: #000000;
+      }
+
+      .disable {
+        opacity: 0.3;
+      }
+    }
+  }
+  .reset-padding {
+    height: 20px;
+  }
+}

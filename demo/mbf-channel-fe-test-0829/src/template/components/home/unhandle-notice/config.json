@@ -1,0 +1,9 @@
+{
+  "name": "UnhandleNotice",
+  "cnName": "代办通知",
+  "path": "{{path}}" ,
+  "category": "文本类",
+  "description": "展示用户代办通知, 多个则上下轮播",
+  "tid":"gbl-basic-unhandleNotice",
+  "propsData": {}
+}

@@ -1,0 +1,23 @@
+.standard-home {
+  .home {
+    background-color: #f6f6f6;
+  
+    .marguee-seat {
+      position: relative;
+      height: 54px;
+    }
+  
+    .life-style {
+      margin: 20px auto;
+    }
+    // N行2列图片圆角样式
+    .rown-columns2-card .rown-columns2-card--top .taro-img {
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
+    // 新人礼样式微信小程序兼容
+    .new-customer-coupons .customer-coupons__main--1deco .customer-coupons__item {
+      width: 650px;
+    }
+  }
+}

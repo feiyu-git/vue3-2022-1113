@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": [
+        "src/*"
+      ],
+      "@api/*": [
+        "src/template/api/*"
+      ],
+      "@comp/*": [
+        "src/components/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@utils/*": [
+        "src/template/utils/*"
+      ],
+      "@config/*": [
+        "src/config/*"
+      ],
+      "@store/*": [
+        "src/store/*"
+      ],
+      "@tempComp": [
+        "src/template/components/*"
+      ]
+    },
+    "target": "es2015",
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "bin"
+  ],
+  "include": [
+    ".temp",
+    "config",
+    "src"
+  ]
+}

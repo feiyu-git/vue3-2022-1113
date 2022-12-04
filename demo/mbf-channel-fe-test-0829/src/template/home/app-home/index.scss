@@ -1,0 +1,40 @@
+.app-home {
+  .navigatebar-status-height {
+    height: 86px;
+  }
+  // 暂时先用覆盖处理
+  .black {
+    $FDZBgColor: #F8D3AB; // 奋斗者金色背景
+    $FDZFontColor: #000; // 奋斗者黑色字体
+    $FDZFontColor2: #A8743F; // 奋斗者黑金字体
+    @mixin fdz-bg-gradient {
+      background: -webkit-linear-gradient(to right, #FFE4C5, #F8D3AB);
+      /*  Safari 5.1 到 6.0 */
+      background: -o-linear-gradient(to right, #FFE4C5, #F8D3AB);
+      /*  Opera 11.6 到 12.0 */
+      background: -moz-linear-gradient(to right, #FFE4C5, #F8D3AB);
+      /*  Fx 3.6 到 15 */
+      background: linear-gradient(to right, #FFE4C5, #F8D3AB);
+    }
+
+    @mixin fdz-btn-base {
+      color: $FDZFontColor;
+      background: $FDZBgColor; /* 针对不支持渐变的浏览器,使用默认的背景颜色 */
+      @include fdz-bg-gradient;
+    }
+    .lui_btn_theme {
+      @include fdz-btn-base;
+    }
+    // 新尊享服务奋斗者样式
+    .lui__new__financial__services{
+      .more-item__content__button {
+        color: $FDZFontColor2;
+      }
+      .secend-item__content__button {
+        border: 2px solid $FDZFontColor2;
+        color: $FDZFontColor2;
+      }
+    }
+  }
+}
+
