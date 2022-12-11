@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-const routes = [
+export const routes = [
   {
     path: '/',
     label: '首页',
@@ -11,6 +11,11 @@ const routes = [
     label: 'demo',
     component: () => import('../views/demo/index.vue')
   },
+  {
+    path: '/me',
+    label: '我的',
+    component: () => import('../views/me/index.vue')
+  },
 ]
 
 // 3. 创建路由实例并传递 `routes` 配置
@@ -19,10 +24,7 @@ const routes = [
 const router = createRouter({
   // 4. 内部提供了 history 模式的实现。为了简单起见，我们在这里使用 hash 模式。
   history: createWebHashHistory(),
-  routes, // `routes: routes` 的缩写
+  routes,
 })
 
-export {
-  routes
-}
 export default router;
