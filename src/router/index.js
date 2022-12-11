@@ -7,15 +7,20 @@ export const routes = [
     component: () => import('../views/home/index.vue')
   },
   {
+    path: '/me',
+    label: '我的',
+    component: () => import('../views/me/index.vue')
+  },
+  {
     path: '/demo',
     label: 'demo',
     component: () => import('../views/demo/index.vue')
   },
   {
-    path: '/me',
-    label: '我的',
-    component: () => import('../views/me/index.vue')
-  },
+    path: '/demo1',
+    label: '完整案例demo1',
+    component: () => import('../views/demo1/index.vue')
+  }
 ]
 
 // 3. 创建路由实例并传递 `routes` 配置
