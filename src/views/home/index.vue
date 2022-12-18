@@ -3,6 +3,9 @@
     <div>home</div>
     <br>
     <button @click="pushJump">push 跳转</button>
+    <br>
+    <br>
+    <button @click="replaceJump">replace 跳转</button>
   </div>
 </template>
 
@@ -19,8 +22,18 @@ export default {
         }
       });
     };
+    const replaceJump = () => {
+      console.log('router------', router);
+      router.replace({
+        path: '/demo',
+        query: {
+          id: 'test_id'
+        }
+      });
+    };
     return {
       pushJump,
+      replaceJump,
     };
   }
 }
